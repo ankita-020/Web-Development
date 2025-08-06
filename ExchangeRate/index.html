@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exchange Rate Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="img/money.jpg" alt="" class="money-img" />
+  <h1>Exchange Rate Calculator</h1>
+  <p>Choose the currency and amount to get the exchange rate</p>
+  <div class="container">
+    <div class="currency">
+      <select id="currency-one">
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+        <option value="PLN">PLN</option>
+        <option value="GBP">GBP</option>
+        <option value="INR" selected >INR</option>
+        <option value="MYR">MYR</option>
+        <option value="HUF">HUF</option>
+        <option value="USD">USD</option>
+        <option value="FJD">FJD</option>
+        <option value="NZD">NZD</option>
+      </select>
+      <input id="amount-one" type="number" placeholder="0" value="1">
+    </div>
+
+    <div class="swap-rate-container">
+      <button class="btn" id="swap">Swap</button>
+      <div class="rate" id="rate"></div>
+    </div>
+
+    <div class="currency">
+      <select id="currency-two">
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+        <option value="PLN">PLN</option>
+        <option value="GBP">GBP</option>
+        <option value="INR">INR</option>
+        <option value="MYR">MYR</option>
+        <option value="HUF">HUF</option>
+        <option value="USD" selected >USD</option>
+        <option value="FJD">FJD</option>
+        <option value="NZD">NZD</option>
+      </select>
+      <input id="amount-two" type="number" placeholder="0">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
