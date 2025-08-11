@@ -42,8 +42,6 @@ function updateWrongLettersEl() {
 
   // Display parts
   figureParts.forEach((part, index) => {
-    console.log('hereree');
-    
     const errors = wrongLetters.length;
     if(index < errors) {
       part.style.display = 'block';
