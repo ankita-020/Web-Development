@@ -118,7 +118,7 @@ function moveBall() {
     column.forEach(brick => {
       if(brick.visible) {
         if(
-          ball.x - ball.size > brick.x &&                     // left side 
+          ball.x - ball.size > brick.x &&                    // left side 
           ball.x + ball.size < brick.x + brick.w &&          // right side 
           ball.y - ball.size > brick.y &&                    // top side 
           ball.y - ball.size < brick.y + brick.h             // bottom side 
