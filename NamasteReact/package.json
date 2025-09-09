@@ -2,7 +2,7 @@
   "name": "namastereact",
   "version": "1.0.0",
   "description": "This is a react app",
-  "main": "app.js",
+ 
   "scripts": {
     "test": "jest"
   },
@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/ankita-020/Web-Development/issues"
   },
-  "homepage": "https://github.com/ankita-020/Web-Development/tree/main#readme"
+  "homepage": "https://github.com/ankita-020/Web-Development/tree/main#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }

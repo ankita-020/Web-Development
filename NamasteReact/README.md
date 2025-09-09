@@ -1,3 +1,24 @@
+# Namaste React
+
+# Parcel
+
+- Dev build
+- Local server
+- HMR = Hot Module Replacement
+- Caching - Faster builds
+- File watching algorithm - written in C++
+- Image optimsation
+- Minification
+- Bundling
+- Compress
+- Content Hashing
+- Code splitting
+- Differential bundling so that app runs on older browsers also
+- Diagnostics
+- Error handling
+- Tree shaking - remove unused code
+- Different dev and production bundles
+
 # Learn about CDN - what is CDN, why do we use cdn, is there any other way?
 
 # What is cross-origin
