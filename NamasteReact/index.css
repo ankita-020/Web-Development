@@ -1,0 +1,74 @@
+body {
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-items ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items ul li {
+  padding: 10px;
+  margin: 10px;
+  font-size: 22px;
+}
+
+.res-card {
+  width: 270px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.res-card:hover {
+  transform: scale(95%);
+  transition: transform 0.3s ease;
+}
+
+.search {
+  padding: 10px;
+}
+
+.image-container {
+  height: 50%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.res-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+.res-detail {
+  padding: 10px;
+}
+
+.res-detail h3 {
+  margin: 0 0 5px;
+}
+
+.res-detail p {
+  margin: 0 0 2px;
+}
+
+.res-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.filter-btn {
+  margin: 10px;
+  cursor: pointer;
+}
