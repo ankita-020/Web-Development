@@ -92,3 +92,17 @@ body {
 .filter {
   margin: 20px;
 }
+.menu-card {
+  background-color: #f0f0f0;
+  margin: 12px;
+  /* width: 100%; */
+  max-width: 800px;
+  height: 200px;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #000;
+}
