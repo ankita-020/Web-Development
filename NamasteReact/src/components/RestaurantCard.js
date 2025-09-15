@@ -26,4 +26,22 @@ const RestaurantCard = (props) => {
   );
 };
 
+export const withExtraLabelCard = (RestaurantCard) => {
+  return (props) => {
+    const { resData } = props;
+    const {
+      aggregatedDiscountInfoV3: { header, subHeader },
+    } = resData?.info;
+
+    return (
+      <div className="relative">
+        <RestaurantCard {...props} />
+        <p className="mx-4 px-4 absolute bottom-3 font-bold text-xl">
+          {header} {subHeader}{" "}
+        </p>
+      </div>
+    );
+  };
+};
+
 export default RestaurantCard;

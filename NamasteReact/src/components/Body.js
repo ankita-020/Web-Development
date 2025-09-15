@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withExtraLabelCard } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
@@ -9,6 +9,7 @@ const Body = () => {
   const [filteredRes, setFilteredRes] = useState([]);
   const [searchText, setSearchText] = useState("");
   const onlineStatus = useOnlineStatus();
+  const RestaurantCardWithLabel = withExtraLabelCard(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -90,7 +91,11 @@ const Body = () => {
             to={`/restaurants/${restaurant.info.id}`}
             key={restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant.info.aggregatedDiscountInfoV3.header ? (
+              <RestaurantCardWithLabel resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
