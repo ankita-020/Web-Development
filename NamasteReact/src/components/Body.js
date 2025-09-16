@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router";
 import RestaurantCard, { withExtraLabelCard } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
@@ -10,6 +11,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const onlineStatus = useOnlineStatus();
   const RestaurantCardWithLabel = withExtraLabelCard(RestaurantCard);
+  const { name, setUserName } = useContext(UserContext);
 
   useEffect(() => {
     fetchData();
@@ -84,6 +86,19 @@ const Body = () => {
         >
           Top Rated Restaurants
         </button>
+
+        <label htmlFor="username" className="ml-5">
+          Enter Username
+        </label>
+        <input
+          type="text"
+          id="username"
+          className="border-1 ml-2 p-2"
+          value={name}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        />
       </div>
       <div className="flex flex-wrap">
         {filteredRes.map((restaurant) => (
@@ -91,7 +106,7 @@ const Body = () => {
             to={`/restaurants/${restaurant.info.id}`}
             key={restaurant.info.id}
           >
-            {restaurant.info.aggregatedDiscountInfoV3.header ? (
+            {restaurant?.info?.aggregatedDiscountInfoV3?.header ? (
               <RestaurantCardWithLabel resData={restaurant} />
             ) : (
               <RestaurantCard resData={restaurant} />

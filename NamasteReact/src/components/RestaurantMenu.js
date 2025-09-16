@@ -8,10 +8,15 @@ import ItemListAccordion from "./ItemListAccordion";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
+  const [showIndex, setShowIndex] = useState(0);
 
   if (resInfo === null) {
     return <Shimmer />;
   }
+
+  const handleAccordionClick = (id) => {
+    setShowIndex(id);
+  };
 
   const { name, cuisines, costForTwoMessage } =
     resInfo?.data?.cards[2]?.card?.card?.info;
@@ -36,7 +41,12 @@ const RestaurantMenu = () => {
       </div>
 
       {filteredCards.map((item) => (
-        <ItemListAccordion item={item} key={item?.card?.card?.categoryId} />
+        <ItemListAccordion
+          item={item}
+          key={item?.card?.card?.categoryId}
+          showItems={showIndex === item?.card?.card?.categoryId}
+          handleAccordionClick={handleAccordionClick}
+        />
       ))}
     </div>
   );
