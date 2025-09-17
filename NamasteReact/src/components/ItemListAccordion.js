@@ -1,7 +1,14 @@
-import { useState } from "react";
-import { CDN_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+import ItemList from "./ItemList";
 
 const ItemListAccordion = ({ item, showItems, handleAccordionClick }) => {
+  const dispatch = useDispatch();
+
+  const handleAddClick = (cartData) => {
+    dispatch(addItem(cartData));
+  };
+
   return (
     <div className="w-9/12 mx-auto my-5 p-4 shadow-lg text-left cursor-pointer">
       <div
@@ -14,25 +21,7 @@ const ItemListAccordion = ({ item, showItems, handleAccordionClick }) => {
         <h3>⬇️</h3>
       </div>
       <div className="my-5">
-        {showItems &&
-          item?.card?.card?.itemCards?.map((data) => {
-            return (
-              <div
-                key={data?.card?.info?.name}
-                className="flex justify-between border-b-2 mb-3 p-4 border-indigo-200 shadow-sm"
-              >
-                <div className="w-9/12">
-                  <p className="font-bold">{data?.card?.info?.name}</p>
-                  <p className="font-bold">₹ {data?.card?.info?.price / 100}</p>
-                  <p>{data?.card?.info?.description}</p>
-                </div>
-                <div className="w-36 h-28">
-                  <img src={CDN_URL + data?.card?.info?.imageId} />
-                  <button className="py-4 w-25">Add+</button>
-                </div>
-              </div>
-            );
-          })}
+        {showItems && <ItemList item={item?.card?.card?.itemCards} />}
       </div>
     </div>
   );
