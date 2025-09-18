@@ -53,6 +53,7 @@ const Body = () => {
       <div className="m-4 p-4">
         <input
           className="border border-solid border-black mr-2 py-1 outline-none"
+          data-testid="searchInput"
           type="text"
           value={searchText}
           onChange={(e) => {
@@ -63,8 +64,6 @@ const Body = () => {
           className="mr-6 px-4 py-1.5 rounded-md bg-green-100"
           onClick={() => {
             const searchedRes = listOfRestaurant.filter((res) => {
-              console.log(res.info.name);
-
               return res.info.name
                 .toLowerCase()
                 .includes(searchText.toLowerCase());

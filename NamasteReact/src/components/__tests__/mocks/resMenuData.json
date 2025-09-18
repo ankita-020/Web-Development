@@ -1,0 +1,873 @@
+{
+    "statusCode": 0,
+    "data": {
+        "statusMessage": "done successfully",
+        "cards": [
+            {
+                "card": {
+                    "card": {
+                        "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+                        "text": "Grameen Kulfi",
+                        "headerStyling": {
+                            "textColor": "text_Highest_Emphasis",
+                            "textVariant": "header_H3_Black"
+                        }
+                    }
+                }
+            },
+            {
+                "card": {
+                    "card": {
+                        "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.RestaurantBlTab",
+                        "tabs": [
+                            {
+                                "id": "Order Online",
+                                "title": "Order Online"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "card": {
+                    "card": {
+                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                        "info": {
+                            "id": "352798",
+                            "name": "Grameen Kulfi",
+                            "city": "Bangalore",
+                            "slugs": {
+                                "restaurant": "grameen-neeladri-nagar-electronic-city",
+                                "city": "bangalore"
+                            },
+                            "uniqueId": "e51e6528-4859-48c8-8fed-e84c17dc2d76",
+                            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/5/16/1fd3bedb-b5cf-40e7-aa28-f5e55d5ea6d6_352798.jpg",
+                            "locality": "1st Phase",
+                            "areaName": "Electronic City Phase-1",
+                            "costForTwo": "12000",
+                            "costForTwoMessage": "₹120 for two",
+                            "cuisines": [
+                                "Ice Cream",
+                                "Desserts"
+                            ],
+                            "avgRating": 4.6,
+                            "veg": true,
+                            "feeDetails": {
+                                "restaurantId": "352798",
+                                "fees": [
+                                    {}
+                                ]
+                            },
+                            "parentId": "12175",
+                            "avgRatingString": "4.6",
+                            "totalRatingsString": "907 ratings",
+                            "sla": {
+                                "restaurantId": "352798",
+                                "deliveryTime": 28,
+                                "minDeliveryTime": 25,
+                                "maxDeliveryTime": 30,
+                                "lastMileTravel": 2.4,
+                                "serviceability": "SERVICEABLE",
+                                "stressFactor": 1,
+                                "rainMode": "RAIN_MODE_NONE",
+                                "longDistance": "LONG_DISTANCE_NOT_LONG_DISTANCE",
+                                "zoneId": 235,
+                                "slaString": "25-30 MINS",
+                                "lastMileTravelString": "2.4 km",
+                                "iconType": "ICON_TYPE_EMPTY"
+                            },
+                            "availability": {
+                                "nextCloseTime": "2025-09-18 01:00:00",
+                                "visibility": true,
+                                "opened": true,
+                                "restaurantClosedMeta": {}
+                            },
+                            "aggregatedDiscountInfo": {
+                                "header": "66% Off",
+                                "shortDescriptionList": [
+                                    {
+                                        "meta": "66% Off | Use SWIGGY6",
+                                        "discountType": "Percentage",
+                                        "operationType": "RESTAURANT"
+                                    },
+                                    {
+                                        "meta": "Flat ₹125 off | Use FLAVORFUL",
+                                        "discountType": "Flat",
+                                        "operationType": "RESTAURANT"
+                                    }
+                                ],
+                                "descriptionList": [
+                                    {
+                                        "meta": "66% Off | Use SWIGGY6",
+                                        "discountType": "Percentage",
+                                        "operationType": "RESTAURANT"
+                                    },
+                                    {
+                                        "meta": "Flat ₹125 off | Use FLAVORFUL",
+                                        "discountType": "Flat",
+                                        "operationType": "RESTAURANT"
+                                    }
+                                ],
+                                "visible": true
+                            },
+                            "badges": {},
+                            "slugString": "grameen-neeladri-nagar-electronic-city",
+                            "multiOutlet": true,
+                            "isOpen": true,
+                            "labels": [
+                                {
+                                    "title": "Timings",
+                                    "message": "null"
+                                },
+                                {
+                                    "title": "Address",
+                                    "message": "Shop no  5 Site no  189  190 RMR Shopping Complex 3rd Cross Neeladri Nagar Electronic city Phase 1 Bangalore Karnataka 560100"
+                                },
+                                {
+                                    "title": "Cuisines",
+                                    "message": "Ice Cream,Desserts"
+                                }
+                            ],
+                            "totalRatings": 907,
+                            "aggregatedDiscountInfoV2": {
+                                "header": "66% Off",
+                                "shortDescriptionList": [
+                                    {
+                                        "meta": "66% Off | Use SWIGGY6",
+                                        "discountType": "Percentage",
+                                        "operationType": "RESTAURANT"
+                                    },
+                                    {
+                                        "meta": "Flat ₹125 off | Use FLAVORFUL",
+                                        "discountType": "Flat",
+                                        "operationType": "RESTAURANT"
+                                    }
+                                ],
+                                "descriptionList": [
+                                    {
+                                        "meta": "66% Off | Use SWIGGY6",
+                                        "discountType": "Percentage",
+                                        "operationType": "RESTAURANT"
+                                    },
+                                    {
+                                        "meta": "Flat ₹125 off | Use FLAVORFUL",
+                                        "discountType": "Flat",
+                                        "operationType": "RESTAURANT"
+                                    }
+                                ],
+                                "couponDetailsCta": "View coupon details"
+                            },
+                            "type": "F",
+                            "nudgeBanners": [
+                                {
+                                    "minValue": 279,
+                                    "maxValue": 399,
+                                    "priority": 2,
+                                    "couponCode": "FLAVORFUL",
+                                    "discountInfo": {
+                                        "discountType": "Flat",
+                                        "value": 125
+                                    },
+                                    "lockedMessage": "Add items worth ₹<amount> to save ₹125 | Code FLAVORFUL",
+                                    "unlockedMessage": "FLAVORFUL Coupon Unlocked! Use it to save ₹125",
+                                    "logoCtx": {}
+                                },
+                                {
+                                    "minValue": 1400,
+                                    "maxValue": 2000,
+                                    "priority": 3,
+                                    "couponCode": "XTRAPARTY",
+                                    "discountInfo": {
+                                        "discountType": "Percentage",
+                                        "value": 20
+                                    },
+                                    "lockedMessage": "Add items worth ₹<amount> to unlock flat 20% off | Code XTRAPARTY",
+                                    "unlockedMessage": "XTRAPARTY Coupon Unlocked! Use it to save flat 20% off",
+                                    "logoCtx": {}
+                                }
+                            ],
+                            "headerBanner": {
+                                "url": "swiggy://webview?is_external=false&webview_url=https://www.swiggy.com/restaurant-info/352798"
+                            },
+                            "generalPurposeInfoListV2": [
+                                {
+                                    "cta": {
+                                        "info": {
+                                            "recordings": {}
+                                        },
+                                        "linkCta": {}
+                                    }
+                                }
+                            ],
+                            "ratingSlab": "RATING_SLAB_5",
+                            "orderabilityCommunication": {
+                                "title": {},
+                                "subTitle": {},
+                                "message": {},
+                                "customIcon": {},
+                                "commsStyling": {}
+                            },
+                            "hasBestsellerItems": true,
+                            "cartOrderabilityNudgeBanner": {
+                                "parameters": {},
+                                "presentation": {}
+                            },
+                            "latLong": "12.8401363,77.6501458",
+                            "backgroundImageOverlayInfo": {},
+                            "featuredSectionInfo": {},
+                            "dishStyle": {
+                                "socialMarkerStyle": [
+                                    {
+                                        "socialMarkerType": "SOCIAL_MARKER_TYPE_HIGH_PROTEIN",
+                                        "title": "Protein Rich",
+                                        "textStyle": "FONT_NAME_V2_BODY3_NEUTRAL_BOLD",
+                                        "textColor": "highlight"
+                                    },
+                                    {
+                                        "socialMarkerType": "SOCIAL_MARKER_TYPE_BESTSELLER",
+                                        "title": "Bestseller",
+                                        "textStyle": "FONT_NAME_V2_BODY3_NEUTRAL_BOLD",
+                                        "textColor": "color_swiggy_one"
+                                    }
+                                ]
+                            }
+                        },
+                        "analytics": {}
+                    },
+                    "relevance": {
+                        "type": "RELEVANCE_TYPE_CHECK_ORDERABILITY_ON_ITEM_ADD",
+                        "sectionId": "POP_UP_CROUTON_MENU"
+                    }
+                }
+            },
+            {
+                "card": {
+                    "card": {
+                        "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+                        "layout": {
+                            "rows": 1,
+                            "columns": 5,
+                            "horizontalScrollEnabled": true,
+                            "itemSpacing": 12,
+                            "lineSpacing": 10,
+                            "widgetPadding": {},
+                            "containerStyle": {
+                                "containerPadding": {
+                                    "left": 10,
+                                    "right": 10,
+                                    "bottom": 16
+                                }
+                            }
+                        },
+                        "id": "offerCollectionWidget_UX4",
+                        "gridElements": {
+                            "infoWithStyle": {
+                                "@type": "type.googleapis.com/swiggy.presentation.food.v2.OfferInfoWithStyle",
+                                "offers": [
+                                    {
+                                        "info": {
+                                            "header": "FLAT ₹125 OFF",
+                                            "offerTag": "FLAT DEAL",
+                                            "offerTagColor": "#E46D47",
+                                            "offerIds": [
+                                                "633248f5-4224-4b2e-89da-44a816b2584a"
+                                            ],
+                                            "expiryTime": "1970-01-01T00:00:00Z",
+                                            "couponCode": "USE FLAVORFUL",
+                                            "description": "ABOVE ₹399",
+                                            "offerType": "offers",
+                                            "restId": "352798",
+                                            "offerLogo": "offers/generic",
+                                            "descriptionTextColor": "#7302060C",
+                                            "primaryDescription": "USE FLAVORFUL"
+                                        },
+                                        "cta": {
+                                            "type": "OFFER_HALF_CARD"
+                                        }
+                                    },
+                                    {
+                                        "info": {
+                                            "header": "FLAT 20% OFF",
+                                            "offerTag": "FLAT DEAL",
+                                            "offerTagColor": "#E46D47",
+                                            "offerIds": [
+                                                "ad943341-542e-4c22-a8da-f7899feeee84"
+                                            ],
+                                            "expiryTime": "1970-01-01T00:00:00Z",
+                                            "couponCode": "USE XTRAPARTY",
+                                            "description": "ABOVE ₹2000",
+                                            "offerType": "offers",
+                                            "restId": "352798",
+                                            "offerLogo": "offers/generic",
+                                            "descriptionTextColor": "#7302060C",
+                                            "primaryDescription": "USE XTRAPARTY"
+                                        },
+                                        "cta": {
+                                            "type": "OFFER_HALF_CARD"
+                                        }
+                                    },
+                                    {
+                                        "info": {
+                                            "header": "10% OFF UPTO ₹100",
+                                            "offerTagColor": "#E46D47",
+                                            "logoBottom": "MARKETING_BANNERS/IMAGES/OFFERS/2025/8/20/c812c78a-7809-4ffa-9eea-59482c5bac46_RuPay.png",
+                                            "offerIds": [
+                                                "aad6b5b0-cd9c-4e28-b967-f72aae66b6f3"
+                                            ],
+                                            "expiryTime": "1970-01-01T00:00:00Z",
+                                            "couponCode": "USE RUPAYCC100",
+                                            "description": "ABOVE ₹600",
+                                            "offerType": "offers",
+                                            "restId": "352798",
+                                            "offerLogo": "MARKETING_BANNERS/IMAGES/OFFERS/2025/8/20/c812c78a-7809-4ffa-9eea-59482c5bac46_RuPay.png",
+                                            "descriptionTextColor": "#7302060C",
+                                            "primaryDescription": "USE RUPAYCC100"
+                                        },
+                                        "cta": {
+                                            "type": "OFFER_HALF_CARD"
+                                        }
+                                    },
+                                    {
+                                        "info": {
+                                            "header": "10% OFF UPTO ₹100",
+                                            "offerTagColor": "#E46D47",
+                                            "logoBottom": "MARKETING_BANNERS/IMAGES/OFFERS/2025/9/1/6737d135-5a16-48b9-a14a-1b6f0525ebbc_RBLMenuVisibilityLogo.png",
+                                            "offerIds": [
+                                                "65365e2f-df47-42cb-bb41-79710f450ad1"
+                                            ],
+                                            "expiryTime": "1970-01-01T00:00:00Z",
+                                            "couponCode": "USE RBLCC100",
+                                            "description": "ABOVE ₹599",
+                                            "offerType": "offers",
+                                            "restId": "352798",
+                                            "offerLogo": "MARKETING_BANNERS/IMAGES/OFFERS/2025/9/1/6737d135-5a16-48b9-a14a-1b6f0525ebbc_RBLMenuVisibilityLogo.png",
+                                            "descriptionTextColor": "#7302060C",
+                                            "primaryDescription": "USE RBLCC100"
+                                        },
+                                        "cta": {
+                                            "type": "OFFER_HALF_CARD"
+                                        }
+                                    },
+                                    {
+                                        "info": {
+                                            "header": "66% OFF UPTO ₹126",
+                                            "offerTag": "DEFAULT",
+                                            "offerTagColor": "#E46D47",
+                                            "logoBottom": "merch_bau/locked-badge.png",
+                                            "offerIds": [
+                                                "bf7f985d-3e7d-486b-b889-f59f1a443a0d"
+                                            ],
+                                            "expiryTime": "1970-01-01T00:00:00Z",
+                                            "couponCode": "USE SWIGGY6",
+                                            "description": "ABOVE ₹179",
+                                            "offerType": "offers",
+                                            "restId": "352798",
+                                            "offerLogo": "merch_bau/locked-badge.png",
+                                            "descriptionTextColor": "#7302060C",
+                                            "primaryDescription": "OFFER UNLOCKS EVERY HOUR"
+                                        },
+                                        "cta": {
+                                            "type": "OFFER_HALF_CARD"
+                                        }
+                                    }
+                                ],
+                                "habitMilestoneInfo": {
+                                    "callout": {}
+                                },
+                                "loyaltyDiscoverPresentationInfo": {
+                                    "logoCtx": {}
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "groupedCard": {
+                    "cardGroupMap": {
+                        "REGULAR": {
+                            "cards": [
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.MenuVegFilterAndBadge",
+                                            "isPureVeg": true,
+                                            "badges": {},
+                                            "vegOnlyDetails": {
+                                                "imageId": "AutoVegOnly_qkjowj",
+                                                "title": "Showing only vegetarian options.",
+                                                "description": "Tap on the VEG ONLY button to turn off the setting"
+                                            },
+                                            "topRatedFilter": {
+                                                "attributes": {
+                                                    "displayText": "Ratings 4.0+"
+                                                }
+                                            },
+                                            "kidsCategoryFilter": {
+                                                "attributes": {
+                                                    "displayText": "Kids Favourites",
+                                                    "tooltip": {
+                                                        "enabled": true,
+                                                        "displayText": "Kids Favourites Filter applied. Remove this filter to see the full Menu."
+                                                    }
+                                                }
+                                            },
+                                            "vegFilter": {
+                                                "attributes": {
+                                                    "displayText": "VEG"
+                                                }
+                                            },
+                                            "nonvegFilter": {
+                                                "attributes": {
+                                                    "displayText": "NONVEG"
+                                                }
+                                            }
+                                        },
+                                        "relevance": {
+                                            "type": "RELEVANCE_TYPE_ON_MENU_FILTER_TOGGLED",
+                                            "sectionId": "MENU_FILTER_TOGGLE"
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                                            "title": "Recommended",
+                                            "itemCards": [
+                                                {
+                                                    "card": {
+                                                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                                                        "info": {
+                                                            "id": "66343818",
+                                                            "name": "Calcutta Paan Stick Kulfi",
+                                                            "category": "Stick Kulfi",
+                                                            "description": "Serves 1 | Refreshingly famous at desi post meal sessions, Meetha Paan flavours with Saunf & Tutti-Frutti are folded into 100% Pure milk Rabdi slow-churned for hours.",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/b825ff64-59a8-4a00-ba87-384d3c4b81ed_92ce0d11-bd40-42d5-98d2-50713d614107.jpg_compressed",
+                                                            "inStock": 1,
+                                                            "isVeg": 1,
+                                                            "price": 6356,
+                                                            "variants": {},
+                                                            "variantsV2": {},
+                                                            "itemAttribute": {
+                                                                "vegClassifier": "VEG",
+                                                                "portionSize": "Serves 1"
+                                                            },
+                                                            "ribbon": {
+                                                                "text": "Bestseller",
+                                                                "textColor": "#ffffff",
+                                                                "topBackgroundColor": "#d53d4c",
+                                                                "bottomBackgroundColor": "#b02331"
+                                                            },
+                                                            "showImage": true,
+                                                            "itemBadge": {},
+                                                            "badgesV2": {},
+                                                            "isBestseller": true,
+                                                            "ratings": {
+                                                                "aggregatedRating": {
+                                                                    "rating": "4.7",
+                                                                    "ratingCount": "184 ratings",
+                                                                    "ratingCountV2": "184"
+                                                                },
+                                                                "ratingsPresentationConfig": {
+                                                                    "bgGradient": {
+                                                                        "colours": [
+                                                                            "#C8F9E5",
+                                                                            "#FFFFFF"
+                                                                        ],
+                                                                        "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                                                                    },
+                                                                    "ratingIconColor": "rating_very_good",
+                                                                    "ratingTextColor": "rating_very_good",
+                                                                    "ratingCountTextColor": "rating_very_good",
+                                                                    "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                                                                    "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                                                                }
+                                                            },
+                                                            "parentId": "56476888"
+                                                        },
+                                                        "analytics": {},
+                                                        "hideRestaurantDetails": true
+                                                    }
+                                                },
+                                                {
+                                                    "card": {
+                                                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                                                        "info": {
+                                                            "id": "66343801",
+                                                            "name": "Butterscotch Stick Kulfi",
+                                                            "category": "Stick Kulfi",
+                                                            "description": "Serves 1 | Say Hi! to our kulfi made trendy, with crunchy Butterscotch bits folded into a creamy 100% Pure milk Rabdi slow-churned for hours. Kcal/serving: 163",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/122c15c9-cc6f-4de6-adea-06e5eaf77b12_82d0d882-07f9-4474-b742-15b290d340f8.jpg_compressed",
+                                                            "inStock": 1,
+                                                            "isVeg": 1,
+                                                            "price": 6356,
+                                                            "variants": {},
+                                                            "variantsV2": {},
+                                                            "itemAttribute": {
+                                                                "vegClassifier": "VEG",
+                                                                "portionSize": "Serves 1"
+                                                            },
+                                                            "ribbon": {},
+                                                            "showImage": true,
+                                                            "itemBadge": {},
+                                                            "badgesV2": {},
+                                                            "ratings": {
+                                                                "aggregatedRating": {
+                                                                    "rating": "4.2",
+                                                                    "ratingCount": "41 ratings",
+                                                                    "ratingCountV2": "41"
+                                                                },
+                                                                "ratingsPresentationConfig": {
+                                                                    "bgGradient": {
+                                                                        "colours": [
+                                                                            "#C8F9E5",
+                                                                            "#FFFFFF"
+                                                                        ],
+                                                                        "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                                                                    },
+                                                                    "ratingIconColor": "rating_very_good",
+                                                                    "ratingTextColor": "rating_very_good",
+                                                                    "ratingCountTextColor": "rating_very_good",
+                                                                    "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                                                                    "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                                                                }
+                                                            },
+                                                            "parentId": "56476887"
+                                                        },
+                                                        "analytics": {},
+                                                        "hideRestaurantDetails": true
+                                                    }
+                                                },
+                                                {
+                                                    "card": {
+                                                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                                                        "info": {
+                                                            "id": "87972051",
+                                                            "name": "Shahi Gulkand Matka Kulfi (pack Of 2)",
+                                                            "category": "Matka Kulfi",
+                                                            "description": "Serves 1 | The rosy refreshment of Gulkand, served in the traditional matka, to make your day all the more special, no matter what the occasion is. Kcal/serving: 198",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/699676d9-51d1-49a6-9d75-55d377e9c7f5_634e3f65-5830-4fc1-893b-32c2fb3b8696.jpg_compressed",
+                                                            "inStock": 1,
+                                                            "isVeg": 1,
+                                                            "price": 16949,
+                                                            "variants": {},
+                                                            "variantsV2": {},
+                                                            "itemAttribute": {
+                                                                "vegClassifier": "VEG",
+                                                                "portionSize": "Serves 1"
+                                                            },
+                                                            "ribbon": {},
+                                                            "showImage": true,
+                                                            "itemBadge": {},
+                                                            "badgesV2": {},
+                                                            "ratings": {
+                                                                "aggregatedRating": {
+                                                                    "rating": "4.7",
+                                                                    "ratingCount": "16 ratings",
+                                                                    "ratingCountV2": "16"
+                                                                },
+                                                                "ratingsPresentationConfig": {
+                                                                    "bgGradient": {
+                                                                        "colours": [
+                                                                            "#C8F9E5",
+                                                                            "#FFFFFF"
+                                                                        ],
+                                                                        "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                                                                    },
+                                                                    "ratingIconColor": "rating_very_good",
+                                                                    "ratingTextColor": "rating_very_good",
+                                                                    "ratingCountTextColor": "rating_very_good",
+                                                                    "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                                                                    "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                                                                }
+                                                            },
+                                                            "parentId": "56761505"
+                                                        },
+                                                        "analytics": {},
+                                                        "hideRestaurantDetails": true
+                                                    }
+                                                }
+                                            ],
+                                            "type": "CATEGORY_TYPE_RECOMMENDED",
+                                            "subtitleSuffix": {},
+                                            "categoryId": "-1"
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                                            "title": "No Added Sugar Kulfi",
+                                            "itemCards": [
+                                                {
+                                                    "card": {
+                                                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                                                        "info": {
+                                                            "id": "153564501",
+                                                            "name": "No Added Sugar Alphonso Mango Stick Kulfi 70ml",
+                                                            "category": "No Added Sugar Kulfi",
+                                                            "description": "Experience the king of fruits in a Stick Kulfi, crafted with no added sugar for pure indulgence.",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/a66eff76-ddcf-4464-a7e5-3e3d8307aa79_e50b974e-6add-4258-a9bc-bfe15831c863.jpg_compressed",
+                                                            "inStock": 1,
+                                                            "isVeg": 1,
+                                                            "price": 7627,
+                                                            "variants": {},
+                                                            "variantsV2": {},
+                                                            "itemAttribute": {
+                                                                "vegClassifier": "VEG"
+                                                            },
+                                                            "ribbon": {},
+                                                            "type": "ITEM",
+                                                            "itemBadge": {},
+                                                            "badgesV2": {},
+                                                            "ratings": {
+                                                                "aggregatedRating": {
+                                                                    "rating": "5.0",
+                                                                    "ratingCount": "5 ratings",
+                                                                    "ratingCountV2": "5"
+                                                                },
+                                                                "ratingsPresentationConfig": {
+                                                                    "bgGradient": {
+                                                                        "colours": [
+                                                                            "#C8F9E5",
+                                                                            "#FFFFFF"
+                                                                        ],
+                                                                        "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                                                                    },
+                                                                    "ratingIconColor": "rating_very_good",
+                                                                    "ratingTextColor": "rating_very_good",
+                                                                    "ratingCountTextColor": "rating_very_good",
+                                                                    "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                                                                    "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                                                                }
+                                                            },
+                                                            "parentId": "91435535"
+                                                        },
+                                                        "analytics": {},
+                                                        "hideRestaurantDetails": true
+                                                    }
+                                                }
+                                            ],
+                                            "subtitleSuffix": {},
+                                            "image": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/a66eff76-ddcf-4464-a7e5-3e3d8307aa79_e50b974e-6add-4258-a9bc-bfe15831c863.jpg_compressed",
+                                            "categoryId": "59028681"
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                                            "title": "Stick Kulfi",
+                                            "itemCards": [
+                                                {
+                                                    "card": {
+                                                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                                                        "info": {
+                                                            "id": "66343818",
+                                                            "name": "Calcutta Paan Stick Kulfi",
+                                                            "category": "Stick Kulfi",
+                                                            "description": "Serves 1 | Refreshingly famous at desi post meal sessions, Meetha Paan flavours with Saunf & Tutti-Frutti are folded into 100% Pure milk Rabdi slow-churned for hours.",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/b825ff64-59a8-4a00-ba87-384d3c4b81ed_92ce0d11-bd40-42d5-98d2-50713d614107.jpg_compressed",
+                                                            "inStock": 1,
+                                                            "isVeg": 1,
+                                                            "price": 6356,
+                                                            "variants": {},
+                                                            "variantsV2": {},
+                                                            "itemAttribute": {
+                                                                "vegClassifier": "VEG",
+                                                                "portionSize": "Serves 1"
+                                                            },
+                                                            "ribbon": {
+                                                                "text": "Bestseller",
+                                                                "textColor": "#ffffff",
+                                                                "topBackgroundColor": "#d53d4c",
+                                                                "bottomBackgroundColor": "#b02331"
+                                                            },
+                                                            "type": "ITEM",
+                                                            "itemBadge": {},
+                                                            "badgesV2": {},
+                                                            "isBestseller": true,
+                                                            "ratings": {
+                                                                "aggregatedRating": {
+                                                                    "rating": "4.7",
+                                                                    "ratingCount": "184 ratings",
+                                                                    "ratingCountV2": "184"
+                                                                },
+                                                                "ratingsPresentationConfig": {
+                                                                    "bgGradient": {
+                                                                        "colours": [
+                                                                            "#C8F9E5",
+                                                                            "#FFFFFF"
+                                                                        ],
+                                                                        "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                                                                    },
+                                                                    "ratingIconColor": "rating_very_good",
+                                                                    "ratingTextColor": "rating_very_good",
+                                                                    "ratingCountTextColor": "rating_very_good",
+                                                                    "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                                                                    "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                                                                }
+                                                            },
+                                                            "parentId": "56476888"
+                                                        },
+                                                        "analytics": {},
+                                                        "hideRestaurantDetails": true
+                                                    }
+                                                },
+                                                {
+                                                    "card": {
+                                                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                                                        "info": {
+                                                            "id": "66343801",
+                                                            "name": "Butterscotch Stick Kulfi",
+                                                            "category": "Stick Kulfi",
+                                                            "description": "Serves 1 | Say Hi! to our kulfi made trendy, with crunchy Butterscotch bits folded into a creamy 100% Pure milk Rabdi slow-churned for hours. Kcal/serving: 163",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/122c15c9-cc6f-4de6-adea-06e5eaf77b12_82d0d882-07f9-4474-b742-15b290d340f8.jpg_compressed",
+                                                            "inStock": 1,
+                                                            "isVeg": 1,
+                                                            "price": 6356,
+                                                            "variants": {},
+                                                            "variantsV2": {},
+                                                            "itemAttribute": {
+                                                                "vegClassifier": "VEG",
+                                                                "portionSize": "Serves 1"
+                                                            },
+                                                            "ribbon": {},
+                                                            "type": "ITEM",
+                                                            "itemBadge": {},
+                                                            "badgesV2": {},
+                                                            "ratings": {
+                                                                "aggregatedRating": {
+                                                                    "rating": "4.2",
+                                                                    "ratingCount": "41 ratings",
+                                                                    "ratingCountV2": "41"
+                                                                },
+                                                                "ratingsPresentationConfig": {
+                                                                    "bgGradient": {
+                                                                        "colours": [
+                                                                            "#C8F9E5",
+                                                                            "#FFFFFF"
+                                                                        ],
+                                                                        "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                                                                    },
+                                                                    "ratingIconColor": "rating_very_good",
+                                                                    "ratingTextColor": "rating_very_good",
+                                                                    "ratingCountTextColor": "rating_very_good",
+                                                                    "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                                                                    "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                                                                }
+                                                            },
+                                                            "parentId": "56476887"
+                                                        },
+                                                        "analytics": {},
+                                                        "hideRestaurantDetails": true
+                                                    }
+                                                }
+                                            ],
+                                            "subtitleSuffix": {},
+                                            "image": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/b825ff64-59a8-4a00-ba87-384d3c4b81ed_92ce0d11-bd40-42d5-98d2-50713d614107.jpg_compressed",
+                                            "categoryId": "52594271"
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                                            "title": "Matka Kulfi",
+                                            "itemCards": [
+                                                {
+                                                    "card": {
+                                                        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                                                        "info": {
+                                                            "id": "87972051",
+                                                            "name": "Shahi Gulkand Matka Kulfi (pack Of 2)",
+                                                            "category": "Matka Kulfi",
+                                                            "description": "Serves 1 | The rosy refreshment of Gulkand, served in the traditional matka, to make your day all the more special, no matter what the occasion is. Kcal/serving: 198",
+                                                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/699676d9-51d1-49a6-9d75-55d377e9c7f5_634e3f65-5830-4fc1-893b-32c2fb3b8696.jpg_compressed",
+                                                            "inStock": 1,
+                                                            "isVeg": 1,
+                                                            "price": 16949,
+                                                            "variants": {},
+                                                            "variantsV2": {},
+                                                            "itemAttribute": {
+                                                                "vegClassifier": "VEG",
+                                                                "portionSize": "Serves 1"
+                                                            },
+                                                            "ribbon": {},
+                                                            "type": "ITEM",
+                                                            "itemBadge": {},
+                                                            "badgesV2": {},
+                                                            "ratings": {
+                                                                "aggregatedRating": {
+                                                                    "rating": "4.7",
+                                                                    "ratingCount": "16 ratings",
+                                                                    "ratingCountV2": "16"
+                                                                },
+                                                                "ratingsPresentationConfig": {
+                                                                    "bgGradient": {
+                                                                        "colours": [
+                                                                            "#C8F9E5",
+                                                                            "#FFFFFF"
+                                                                        ],
+                                                                        "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                                                                    },
+                                                                    "ratingIconColor": "rating_very_good",
+                                                                    "ratingTextColor": "rating_very_good",
+                                                                    "ratingCountTextColor": "rating_very_good",
+                                                                    "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                                                                    "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                                                                }
+                                                            },
+                                                            "parentId": "56761505"
+                                                        },
+                                                        "analytics": {},
+                                                        "hideRestaurantDetails": true
+                                                    }
+                                                }
+                                            ],
+                                            "subtitleSuffix": {},
+                                            "image": "FOOD_CATALOG/IMAGES/CMS/2025/5/7/699676d9-51d1-49a6-9d75-55d377e9c7f5_634e3f65-5830-4fc1-893b-32c2fb3b8696.jpg_compressed",
+                                            "categoryId": "52594270"
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.RestaurantLicenseInfo",
+                                            "type": "FSSAI",
+                                            "imageId": "fssai_final_edss9i",
+                                            "text": [
+                                                "License No. 11219302000122"
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "card": {
+                                        "card": {
+                                            "@type": "type.googleapis.com/swiggy.presentation.food.v2.RestaurantAddress",
+                                            "name": "Grameen Kulfi",
+                                            "area": "Electronic City Phase-1",
+                                            "completeAddress": "Shop no  5 Site no  189  190 RMR Shopping Complex 3rd Cross Neeladri Nagar Electronic city Phase 1 Bangalore Karnataka 560100"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        ],
+        "firstOffsetRequest": true,
+        "isQCLink": false
+    },
+    "tid": "25e128bb-d46e-4a70-8ad1-f28001c979a0",
+    "sid": "mx9e8ffe-3175-4254-b906-2b42c1ca156c",
+    "deviceId": "dc38cc05-6140-8d66-50a7-4a6e7131d9db",
+    "csrfToken": "dNxVDWEXjO3K-guTw6pffAIxhbnf9khWdVOUZ6CA"
+}

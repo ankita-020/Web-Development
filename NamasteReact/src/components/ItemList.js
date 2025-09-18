@@ -16,6 +16,7 @@ const ItemList = ({ item }) => {
           <div
             key={data?.card?.info?.name}
             className="flex justify-between border-b-2 mb-3 p-4 border-indigo-200 shadow-sm"
+            data-testid="foodItem"
           >
             <div className="w-9/12">
               <p className="font-bold">{data?.card?.info?.name}</p>
