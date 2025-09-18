@@ -10,3 +10,19 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Features
+
+- Login/Sign up page
+  - Sign in / Sign up page
+  - redirect to browse page
+- Browse page (after authentication)
+  - Header
+  - Main movie
+    - Trailer in background
+    - Movie title and description
+    - Movie suggestions
+      - Movie list \* N
+- NetflixGPT
+  - Search Bar
+  - Movie suggestions
