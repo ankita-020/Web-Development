@@ -1,11 +1,60 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import Header from "./Header";
+import { checkValidData } from "../utils/validate";
+import { auth } from "../utils/firebase";
 
 const Login = () => {
   const [isSignInForm, setIsSignForm] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
   const toggleSignInForm = () => {
     setIsSignForm(!isSignInForm);
+  };
+
+  const handleButtonClick = (e) => {
+    e.preventDefault();
+    // Validate the form data
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    const msg = checkValidData(email, password);
+    setErrorMessage(msg);
+    if (msg) return;
+
+    // Sign In / Sign Up logic
+    if (!isSignInForm) {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage);
+          // ..
+        });
+    } else {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage);
+        });
+    }
   };
 
   return (
@@ -15,7 +64,7 @@ const Login = () => {
       "
     >
       <Header />
-      <div className="w-4/12 h-[200] m-auto mt-5 bg-black text-white p-12 opacity-80">
+      <div className="w-5/12 h-[200] m-auto mt-5 bg-black text-white p-12 opacity-80">
         <form className="flex flex-col">
           <h1 className="font-bold text-3xl py-4">
             {isSignInForm ? "Sign In" : "Sign Up"}
@@ -28,18 +77,24 @@ const Login = () => {
             />
           )}
           <input
+            ref={emailRef}
             className="p-4 mb-6 bg-gray-700"
             type="text"
             placeholder="Email Address"
           />
           <input
+            ref={passwordRef}
             className="p-4 mb-6 bg-gray-700"
             type="password"
             placeholder="Password"
           />
-          <button className="p-4 mb-4 bg-red-700 rounded-lg">
+          <button
+            className="p-4 mb-4 bg-red-700 rounded-lg cursor-pointer"
+            onClick={handleButtonClick}
+          >
             {isSignInForm ? "Sign In" : "Sign Up"}
           </button>
+          <p className="font-bold text-md text-red-600">{errorMessage}</p>
           <p className="p-4 cursor-pointer" onClick={toggleSignInForm}>
             {isSignInForm
               ? "New to Netflix? Sign Up Now"
