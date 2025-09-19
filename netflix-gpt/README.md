@@ -23,6 +23,11 @@ If you are developing a production application, we recommend using TypeScript wi
 - useRef hook
 - Firebase setup
 - Deploying app to prod
+- Created Sign up user account
+- Implement Sign In in user api
+- Created Redux store
+- Implemented Sign out
+- Fetch from TMDB movies
 
 # Features
 
