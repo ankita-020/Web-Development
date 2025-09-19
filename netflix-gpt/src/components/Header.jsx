@@ -1,40 +1,57 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { useSelector } from "react-redux";
-import { signOut } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useDispatch } from "react-redux";
 import { auth } from "../utils/firebase";
+import { addUser, removeUser } from "../utils/userSlice";
+import { LOGO_URL, PROFILE_ICON } from "../utils/constants";
 
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.userInfo);
+  const dispatch = useDispatch();
 
   const handleSignOut = () => {
     signOut(auth)
-      .then(() => {
-        navigate("/");
-      })
+      .then(() => {})
       .catch((error) => {
         // An error happened.
       });
   };
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const { uid, email, displayName } = user;
+        dispatch(addUser({ uid, email, displayName }));
+        navigate("/browse");
+        // ...
+      } else {
+        // User is signed out
+        // ...
+        dispatch(removeUser());
+        navigate("/");
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
-    <div className="px-8 py-2 bg-gradient-to-b from-black flex justify-between items-center">
-      <img
-        className="w-44"
-        src="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-08-26/consent/87b6a5c0-0104-4e96-a291-092c11350111/0198e689-25fa-7d64-bb49-0f7e75f898d2/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
-        alt="logo"
-      />
+    <div className="px-8 bg-black opacity-90 flex justify-between items-center">
+      <img className="w-34" src={LOGO_URL} alt="logo" />
+
       {user && (
         <div>
-          <button onClick={handleSignOut}>
+          <button className="flex items-center" onClick={handleSignOut}>
             <img
-              className="ml-3.5 mb-2"
-              src="https://occ-0-2611-3662.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
+              className="ml-3.5 mb-2 mr-2"
+              src={PROFILE_ICON}
               alt="sign-out"
             />
-            <p className="font-bold">{user.displayName}</p>
-            <span className="font-bold">Sign out</span>
+            <span className="font-bold text-white">Sign out</span>
           </button>
         </div>
       )}

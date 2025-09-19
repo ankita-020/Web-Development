@@ -28,6 +28,18 @@ If you are developing a production application, we recommend using TypeScript wi
 - Created Redux store
 - Implemented Sign out
 - Fetch from TMDB movies
+- Bug fix
+  - If the user is not logged in redirect to login page else redirect to browse page
+  - Display name of user
+- Unsubscribed to onAuthStateChanged callback
+- Register TMDB api and create an app & get access token
+- Get data from TMDB movie list api
+- Custom hook for Now Playing Movies
+- Create a movie slice
+- Planning for main container and secondary container
+- Fetch data for trailer video
+- Updated store for trailer video
+- Embedded youtube video and made it autoplay and mute
 
 # Features
 

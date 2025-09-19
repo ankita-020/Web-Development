@@ -6,7 +6,6 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { useNavigate } from "react-router";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
 import { auth } from "../utils/firebase";
@@ -18,7 +17,6 @@ const Login = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
@@ -50,7 +48,6 @@ const Login = () => {
               .then(() => {
                 const { uid, email, displayName, photoURL } = auth.currentUser;
                 dispatch(addUser({ uid, email, displayName, photoURL }));
-                navigate("/browse");
               })
               .catch((error) => {
                 setErrorMessage(error.message);
@@ -67,9 +64,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          if (user) {
-            navigate("/browse");
-          }
+
           // ...
         })
         .catch((error) => {
