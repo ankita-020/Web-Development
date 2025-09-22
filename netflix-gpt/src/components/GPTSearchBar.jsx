@@ -22,8 +22,8 @@ const GPTSearchBar = () => {
   };
 
   return (
-    <div className="py-[20%] bg-black">
-      <form className="w-[80%] m-auto flex items-center">
+    <div className="py-[20%] bg-black h-screen">
+      <form className="w-full md:w-[80%] m-auto flex items-center">
         <input
           ref={searchTextRef}
           type="text"
@@ -31,7 +31,7 @@ const GPTSearchBar = () => {
           placeholder={language[lang].gptSearchPlaceholder}
         />
         <button
-          className="w-[20%] p-3 bg-red-700 text-white rounded-lg "
+          className="w-[20%] p-3 bg-red-700 mr-3 text-white rounded-lg "
           onClick={handleGPTSearchClick}
         >
           {language[lang].search}

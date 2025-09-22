@@ -82,7 +82,7 @@ const Login = () => {
       "
     >
       <Header />
-      <div className="w-5/12 h-[200] m-auto mt-5 bg-black text-white p-12 opacity-80">
+      <div className="w-full md:w-5/12 h-[200] m-auto md:mt-5 bg-black text-white p-12 opacity-80">
         <form className="flex flex-col">
           <h1 className="font-bold text-3xl py-4">
             {isSignInForm ? "Sign In" : "Sign Up"}

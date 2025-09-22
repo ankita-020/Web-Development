@@ -43,6 +43,9 @@ If you are developing a production application, we recommend using TypeScript wi
 - GPT search feature
 - GPT Search bar
 - Multi language gpt search page
+- Open AI Api
+- Responsiveness
+- Added .env file
 
 # Features
 

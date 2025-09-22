@@ -51,7 +51,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="px-8 bg-black opacity-90 flex justify-between items-center">
+    <div className="px-8 bg-black sm:bg-blue-900 md:bg-green-900 opacity-90 flex justify-between items-center flex-wrap">
       <img className="w-34" src={LOGO_URL} alt="logo" />
 
       {user && (
