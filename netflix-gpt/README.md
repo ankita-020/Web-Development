@@ -40,6 +40,9 @@ If you are developing a production application, we recommend using TypeScript wi
 - Fetch data for trailer video
 - Updated store for trailer video
 - Embedded youtube video and made it autoplay and mute
+- GPT search feature
+- GPT Search bar
+- Multi language gpt search page
 
 # Features
 
