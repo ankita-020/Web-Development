@@ -4,7 +4,6 @@ import MovieList from "./MovieList";
 
 const SecondaryContainer = () => {
   const { nowPlayingMovies } = useSelector((store) => store.movies);
-  console.log("nowPlayingMovies", nowPlayingMovies);
 
   return (
     nowPlayingMovies && (
