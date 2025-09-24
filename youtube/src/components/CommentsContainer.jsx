@@ -82,10 +82,10 @@ const CommentList = ({ comments }) => {
 };
 
 const Comment = ({ data }) => {
-  const { name, text, replies } = data;
+  const { name, text } = data;
 
   return (
-    <div className="flex w-[80%] bg-gray-100 p-2 rounded-lg my-2">
+    <div className="flex bg-gray-100 p-2 rounded-lg my-2">
       <i className="fa-solid fa-user text-2xl"></i>
       <div className="px-3">
         <p className="font-bold">{name}</p>
@@ -97,7 +97,7 @@ const Comment = ({ data }) => {
 
 const CommentsContainer = () => {
   return (
-    <div className="m-5 p-2">
+    <div className="m-5 p-2 w-[70%]">
       <h1 className="font-bold text-3xl mb-3">Comments</h1>
       <CommentList comments={commentData} />
     </div>
