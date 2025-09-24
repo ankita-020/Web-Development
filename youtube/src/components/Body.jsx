@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router";
 import Sidebar from "./Sidebar";
 import MainContainer from "./MainContainer";
 import { useSelector } from "react-redux";
@@ -8,7 +9,7 @@ const Body = () => {
   return (
     <div className="grid grid-flow-col">
       {isMenuOpen && <Sidebar />}
-      <MainContainer />
+      <Outlet />
     </div>
   );
 };

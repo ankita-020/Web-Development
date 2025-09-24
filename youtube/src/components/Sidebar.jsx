@@ -1,11 +1,21 @@
 import React from "react";
+import { Link, useLocation } from "react-router";
 
 const Sidebar = () => {
+  const path = useLocation();
+  const isWatchPage = path.pathname === "/watch";
+
   return (
-    <div className="p-5 shadow-lg w-48 h-lvh">
+    <div
+      className={`p-5 shadow-lg w-48 h-lvh bg-white ${
+        isWatchPage ? "absolute" : "static"
+      }`}
+    >
       <div className="border-b border-gray-500 py-3">
         <ul>
-          <li className="p-2">Home</li>
+          <li className="p-2">
+            <Link to={"/"}>Home</Link>
+          </li>
           <li className="p-2">Shorts</li>
           <li className="p-2">Subscriptions</li>
         </ul>

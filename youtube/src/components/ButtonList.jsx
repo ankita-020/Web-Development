@@ -13,7 +13,7 @@ const ButtonList = () => {
     "Valentines",
   ];
   return (
-    <div className="flex">
+    <div className="flex flex-wrap">
       {buttonList.map((button) => (
         <button key={button} className="px-5 py-2 m-2 bg-gray-200 rounded-lg">
           {button}
