@@ -20,4 +20,8 @@ If you are developing a production application, we recommend using TypeScript wi
 - Created a Vite + React project
 - Removed unnecessary code and created a Hello World app
 - Install Tailwindcss
-- Daisy UI
+- Install Daisy UI
+- Created Navbar
+- Install react-router
+- Created Footer
+- Created Login Page
