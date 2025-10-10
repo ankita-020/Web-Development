@@ -1,6 +1,5 @@
 // this in global space represents global object. In case of browsers global object is Window, in nodejs it is Global, etc...
-console.log(this);  
-
+console.log(this);
 
 // this inside function
 function x() {
@@ -13,74 +12,82 @@ function x() {
   console.log(this);
 }
 
-x()             // here the value of this would be undefined in strict mode
-window.x()      // here the value of this would be window
+x(); // here the value of this would be undefined in strict mode
+window.x(); // here the value of this would be window
 
 // this inside an object
 const obj = {
   a: 10,
-  x: function() {               // function inside an object is called method
-    console.log(this.a);        // this refers to the object that called function
-  }
-}
+  x: function () {
+    // function inside an object is called method
+    console.log(this.a); // this refers to the object that called function
+  },
+};
 
-obj.x()
+obj.x();
 
 const obj2 = {
   a: 10,
-  x: () => {               // arrow function does not have its own this binding
-    console.log('arrow-----', this);   // it retains the this value of enclosing lexical context. Here enclosing lexical context of arrow function is global space.
+  x: () => {
+    // arrow function does not have its own this binding
+    console.log("arrow-----", this); // it retains the this value of enclosing lexical context. Here enclosing lexical context of arrow function is global space.
   },
-  y: function() {
+  y: function () {
     const z = () => {
-      console.log('arrow inside normal function----', this); // here enclosing lexical context is normal function y
-    }
-    z()
+      console.log("arrow inside normal function----", this); // here enclosing lexical context is normal function y
+    };
+    z();
   },
   k: () => {
     function hello() {
-      console.log('normal function inside arrow function----', this);
+      console.log("normal function inside arrow function----", this);
     }
-    hello()
-  }
-}
+    hello();
+  },
+};
 
-obj2.x()
-obj2.y()
-obj2.k()
+obj2.x();
+obj2.y();
+obj2.k();
 
 // this in call, apply and bind
 let name1 = {
-  firstname: 'Ankita',
-  lastname: 'Kumari',
-  fullName: function() {
+  firstname: "Ankita",
+  lastname: "Kumari",
+  fullName: function () {
     console.log(this.firstname + " " + this.lastname);
-  }
-}
+  },
+};
 
 let name2 = {
-  firstname: 'Harsh',
-  lastname: 'Shandilya',
-}
+  firstname: "Harsh",
+  lastname: "Shandilya",
+};
 
 // name1.fullName.call(name2)
 
 // 2nd way to use call, apply bind
 function getFullName(hometown, state) {
-  console.log(this.firstname + " " + this.lastname + ' from ' + hometown + ',' + state);
+  console.log(
+    this.firstname + " " + this.lastname + " from " + hometown + "," + state
+  );
 }
 
 let name3 = {
-  firstname: 'Ankita2',
-  lastname: 'Kumari',
-}
+  firstname: "Ankita2",
+  lastname: "Kumari",
+};
 
 let name4 = {
-  firstname: 'Harsh2',
-  lastname: 'Shandilya',
-}
+  firstname: "Harsh2",
+  lastname: "Shandilya",
+};
 
 // getFullName.call(name4, "Begusarai", "Bihar")
 // getFullName.apply(name4, ["Begusarai", "Bihar"])
 // const getBindedFullName = getFullName.bind(name3, "Begusarai", "Bihar")
 // getBindedFullName()
+
+/**********
+ * In Function.prototype methods, this refers to the Function object itself.
+ */

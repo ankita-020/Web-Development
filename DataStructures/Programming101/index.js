@@ -1,8 +1,8 @@
-/*************** Check eligibility to vote ****************/ 
+/*************** Check eligibility to vote ****************/
 
 // function eligibleToVote(age) {
 //   if(age < 1) {
-//     console.log('Invalid input'); 
+//     console.log('Invalid input');
 //   } else if (age < 18) {
 //     console.log('No, not eligible');
 //   } else {
@@ -14,7 +14,7 @@
 // eligibleToVote(17)
 // eligibleToVote(-1)
 
-/*************** Check even or odd ****************/ 
+/*************** Check even or odd ****************/
 
 // function isEvenOrOdd(num) {
 //   if(num % 2 === 0) {
@@ -37,10 +37,10 @@
 // }
 
 // function greet(i) {
-//   console.log('Namaste! ', i); 
+//   console.log('Namaste! ', i);
 // }
 
-// for(let i = 1; i < 10; i++) {                   
+// for(let i = 1; i < 10; i++) {
 //   greet(i)
 // }
 
@@ -50,7 +50,7 @@
 // let length = arr.length
 // for(let i = 0; i < length; i++) {
 //   if(arr[i] % 2 === 0) {
-//     console.log(arr[i]); 
+//     console.log(arr[i]);
 //   }
 // }
 
@@ -60,7 +60,6 @@
 // while(i < 5) {
 //   // Do it here
 //   console.log(i);
-  
 
 //   i++;
 // }
@@ -68,7 +67,7 @@
 /******* Search for an element in an array and return index, if the element is not present then return -1 ************/
 
 // function searchItem(arr, item) {
-//   let index 
+//   let index
 //   for(let i = 0; i<arr.length; i++){
 //     if(arr[i] === item) {
 //       return i
@@ -79,7 +78,6 @@
 
 // let result = searchItem([10, 5, 2, 3, 6], 3)
 // console.log(result);
-
 
 /******* Write a function that returns the no of negative numbers in array */
 
@@ -99,7 +97,7 @@
 /******* Write a function that returns the largest no in array */
 
 // function largestNumber(arr) {
-// let max = -Infinity              // let max = arr[0] 
+// let max = -Infinity              // let max = arr[0]
 //   for(let i = 0; i < arr.length; i++) {
 //     if(arr[i] > max)
 //       max = arr[i]
@@ -113,7 +111,7 @@
 /******* Write a function that returns the minimum no in array */
 
 // function minNumber(arr) {
-//   let min = Infinity             // let min = arr[0]                       
+//   let min = Infinity             // let min = arr[0]
 //   for(let i = 0; i < arr.length; i++) {
 //     if(arr[i] < min) {
 //       min = arr[i]
@@ -143,11 +141,11 @@
 //   }
 //   return secondLargest
 
-  /*** corner cases
-   * If array is empty or has only one element
-   * If has array has duplicate elements, then 2nd largest should not be same as first largest
-   * If array has negative numbers
-   **/ 
+/*** corner cases
+ * If array is empty or has only one element
+ * If has array has duplicate elements, then 2nd largest should not be same as first largest
+ * If array has negative numbers
+ **/
 
 //}
 // let result = secondLargest([100, 2, 30, 4, 5, 6, 8, 5])
@@ -164,7 +162,6 @@
 // }
 // doubleLoop()
 
-
 /************** Star pattern ***************/
 
 // function star1() {
@@ -178,7 +175,6 @@
 // }
 // star1()
 
-
 // function star2() {
 //   for(let i=0; i<5; i++) {
 //     let row = ""
@@ -189,7 +185,6 @@
 //   }
 // }
 // star2()
-
 
 // function star3() {
 //   for(let i = 0; i<5; i++) {
@@ -212,7 +207,6 @@
 //   }
 // }
 // star4()
-
 
 // function star5() {
 //   for(let i = 5; i>=1; i--) {
@@ -246,24 +240,62 @@
 //       row = row + '*'
 //     }
 //     console.log(row);
-    
+
 //   }
 // }
 // star7()
 
-function star8() {
-  for(let i=0; i<10; i++) {
-    let row = ""
-    for(let j=0; j<=i; j++) {
-      if(j%2 === 0) {
-        row = row + 1
-      } else {
-        row = row + 0
-      }
-    }
-    console.log(row);
-    
-  }
-}
-star8()
+// function star8() {
+//   for(let i=0; i<10; i++) {
+//     let row = ""
+//     for(let j=0; j<=i; j++) {
+//       if(j%2 === 0) {
+//         row = row + 1
+//       } else {
+//         row = row + 0
+//       }
+//     }
+//     console.log(row);
 
+//   }
+// }
+// star8()
+
+/************** Palindrome ************************/
+// function palindrome(n) {
+//   let rem;
+//   let reverse = ""; // let reverse = 0
+//   let num = n;
+
+//   if (n < 0) return false;
+
+//   while (n > 0) {
+//     rem = n % 10;
+//     reverse = reverse + rem; // reverse = (reverse * 10) + rem
+//     n = Math.floor(n / 10);
+//   }
+//   console.log(reverse, num);
+//   return Number(reverse) === num;
+// }
+
+// console.log(palindrome(-2552));
+
+/***** Reverse an integer **************************/
+// function reverse(n) {
+//   let num = n;
+//   let reverse = 0;
+//   n = Math.abs(n);
+
+//   while (n > 0) {
+//     let rem = n % 10;
+//     reverse = reverse * 10 + rem;
+//     n = Math.floor(n / 10);
+//   }
+
+//   let limit = Math.pow(2, 31);
+//   if (reverse < -limit || reverse > limit) return 0;
+
+//   return num > 0 ? reverse : -reverse;
+// }
+
+// console.log(reverse(1213));
