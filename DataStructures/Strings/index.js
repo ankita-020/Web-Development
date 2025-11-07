@@ -221,7 +221,7 @@ function reverseString(str, k) {
 }
 //console.log(reverseString("abcdefg", 2));
 
-/*************** Valid palindrome */
+/*************** Valid palindrome **************/
 function validPalindrome(str) {
   str = str.toLowerCase();
   let newStr = ""; // S - O(n)
@@ -245,4 +245,125 @@ function validPalindrome(str) {
   // return newStr === reversedString
 }
 
-console.log(validPalindrome("A man, a plan, a canal: Panama"));
+function validPalindrome2(str) {
+  str = str.toLowerCase();
+  let i = 0;
+  let j = str.length - 1;
+  while (i < j) {
+    if (!str[i].match(/[a-z0-9]/)) {
+      i++;
+    } else if (!str[j].match(/[a-z0-9]/)) {
+      j--;
+    } else if (str[i] === str[j]) {
+      i++;
+      j--;
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+//console.log(validPalindrome2("A man, a plan, a canal: Panama"));
+
+function largestOddNum(str) {
+  let n = str.length - 1;
+
+  while (n >= 0) {
+    if (Number(str[n]) % 2 === 1) {
+      return str.substring(0, n + 1);
+    }
+    n--;
+  }
+  return "";
+}
+
+// console.log(largestOddNum("3542"));
+
+function longestCommonPrefix(arr) {
+  let n = arr.length;
+  let x = 0;
+
+  while (x < arr[0].length) {
+    // T - O(sum of length of all strings)
+    // S - O(1)
+    let ch = arr[0][x];
+
+    for (let i = 1; i < n; i++) {
+      if (ch !== arr[i][x] || x == arr[i].length) {
+        return arr[0].substring(0, x);
+      }
+    }
+    x++;
+  }
+  return arr[0];
+}
+
+//console.log(longestCommonPrefix(["flower", "flow", "float"]));
+
+function validAnangram(str1, str2) {
+  // sort both strings and check if they are equal
+  let s = str1.split("").sort().join(""); // T - O(nlogn); S - O(n)
+  let t = str2.split("").sort().join("");
+
+  console.log(s, t);
+
+  return s === t;
+}
+
+function validAnangram2(s, t) {
+  let obj = {}; // S - O(1) because there can be max 26 chars; T - O(n)
+  if (s.length !== t.length) return false;
+
+  for (let i = 0; i < s.length; i++) {
+    obj = {
+      ...obj,
+      [s[i]]: obj[s[i]] ? obj[s[i]] + 1 : 1,
+    };
+  }
+
+  for (let i = 0; i < t.length; i++) {
+    if (!obj[t[i]] || obj[t[i]] < 0) {
+      return false;
+    } else {
+      obj[t[i]] = obj[t[i]] - 1;
+    }
+  }
+  return true;
+}
+
+// console.log(validAnangram2("anagram", "nagaram"));
+
+function isomorphicStrings(s, t) {
+  let obj = {};
+  let obj2 = {};
+
+  for (let i = 0; i < s.length; i++) {
+    if (!obj[s[i]] && !obj2[t[i]]) {
+      obj[s[i]] = t[i];
+      obj2[t[i]] = s[i];
+    } else if (obj[s[i]] !== t[i] || obj2[t[i]] !== s[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// console.log(isomorphicStrings("ab", "aa"));
+
+function groupAnagrams(arr) {
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    // T - O(n * mlogm); S - O(n*m)
+    let word = arr[i].split("").sort().join(""); // T of sort - O(mlogm)
+    if (!obj[word]) {
+      obj[word] = [arr[i]];
+    } else {
+      obj[word].push(arr[i]);
+    }
+  }
+  return Object.values(obj);
+}
+
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
