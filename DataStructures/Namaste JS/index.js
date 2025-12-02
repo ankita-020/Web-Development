@@ -1,4 +1,10 @@
-
+/************** Functions
+ * The arguments object is an array-like object that is accessible inside functions and it contains values or arguments passed to that function. Hence we can use arguments.length to determine the number of arguments passed.
+ * eg: fn() { return arguments.length }
+ * Calling a function with undefined. undefined is still counted as a parameter.
+ * Default function parameters will be initialized with default values if no value or undefined is passed.
+ * Only arguments passed are counted in arguments array, default value of params are not counted as argument
+ */
 // var x = 7
 
 // function getName() {
@@ -17,11 +23,11 @@
 //     function close(a) {
 //       setTimeout(function() {
 //       console.log(a);
-      
+
 //       }, a*1000)
 //     }
 //   close(i)
-//   } 
+//   }
 // }
 // x()
 
@@ -38,39 +44,38 @@
 //   console.log('y');
 // })
 
-const radiusArr = [2, 3, 4, 5]
+const radiusArr = [2, 3, 4, 5];
 
 const area = (radius) => {
-  return Math.PI * radius * radius
-}
+  return Math.PI * radius * radius;
+};
 
 const calculate = (radiusArr, logic) => {
-  let output = []
-  for(let i = 0; i < radiusArr.length; i++) {
-    output.push(logic(radiusArr[i]))
+  let output = [];
+  for (let i = 0; i < radiusArr.length; i++) {
+    output.push(logic(radiusArr[i]));
   }
-  return output
-}
+  return output;
+};
 
 // console.log(calculate(radiusArr, area));
- 
+
 /******************* Array prototype ******************/
-Array.prototype.calculate = function(logic) {
-   let output = []
- 
-   for(let i = 0; i < this.length; i++) {
-    output.push(logic(this[i]))
+Array.prototype.calculate = function (logic) {
+  let output = [];
+
+  for (let i = 0; i < this.length; i++) {
+    output.push(logic(this[i]));
   }
-  
-  
-  return output
-}
+
+  return output;
+};
 
 // console.log(radiusArr.calculate(area));
 
 /************ Map, filter, reduce *******************/
 
-const arr = [1, 20, 3, 4, 50]
+const arr = [1, 20, 3, 4, 50];
 
 // const binary = arr.map((a) => a.toString(2))
 // const filteredValues = arr.filter((a) => a % 2 === 0 ? a : null)
@@ -98,34 +103,34 @@ const arr = [1, 20, 3, 4, 50]
 // console.log(maxNo);
 
 const users = [
-  {firstName: 'Ankita', lastName: 'kumari', age: 30},
-  {firstName: 'Harsh', lastName: 'Shandilya', age: 32},
-  {firstName: 'Anjali', lastName: 'kumari', age: 30},
-  {firstName: 'Khushboo', lastName: 'kumari', age: 40}
-]
+  { firstName: "Ankita", lastName: "kumari", age: 30 },
+  { firstName: "Harsh", lastName: "Shandilya", age: 32 },
+  { firstName: "Anjali", lastName: "kumari", age: 30 },
+  { firstName: "Khushboo", lastName: "kumari", age: 40 },
+];
 
 const ages = users.reduce((acc, user) => {
   acc = {
     ...acc,
-    [user.age] : acc[user.age] ? acc[user.age] + 1 : 1
-  }
-  return acc
-}, {})
+    [user.age]: acc[user.age] ? acc[user.age] + 1 : 1,
+  };
+  return acc;
+}, {});
 
 // console.log(ages);
 
 const ageLessThan35 = users.reduce((acc, curr) => {
-  if(curr.age < 35){
-    acc.push(curr.firstName)
+  if (curr.age < 35) {
+    acc.push(curr.firstName);
   }
-  return acc
-}, [])
+  return acc;
+}, []);
 
 // console.log(ageLessThan35);
 
 /************ CALLBACK HELL AND INVERSION OF CONTROL *******************/
 
-const cart = ["shoes", "shirts", 'pants']
+const cart = ["shoes", "shirts", "pants"];
 
 // api.createOrder(cart, function() {
 //   api.proceedToPayment(function() {
@@ -136,7 +141,7 @@ const cart = ["shoes", "shirts", 'pants']
 // })
 
 /************ PROMISES *******************/
-/***** 
+/*****
  * Promise is an object that represents eventual completion or failure of an async operation
  * Promise in pending state is an empty object
  * Promise object can be resolved only once
@@ -145,66 +150,65 @@ const cart = ["shoes", "shirts", 'pants']
  * catch handles all the then blocks above it and not the ones below it
  */
 
-const GITHUB_API = 'https://jsonplaceholder.typicode.com/posts'
-const user = fetch(GITHUB_API)
+const GITHUB_API = "https://jsonplaceholder.typicode.com/posts";
+const user = fetch(GITHUB_API);
 
-user
-.then((data) => data.json())
-.then(res => {})
-
-
+user.then((data) => data.json()).then((res) => {});
 
 // Creating PROMISES ************************
 
-const cartItems = ['shoes', "shirts", "pants"]
+const cartItems = ["shoes", "shirts", "pants"];
 
 const validateCart = (cart) => {
-  return true
-}
+  return true;
+};
 
 const proceedToPayment = (orderId) => {
-  return new Promise((resolve, reject) => resolve(`Payment for order id ${orderId} is successful`))
-}
+  return new Promise((resolve, reject) =>
+    resolve(`Payment for order id ${orderId} is successful`)
+  );
+};
 
 const showOrderSummary = (msg) => {
-  return new Promise((resolve, reject) => resolve(msg))
-}
+  return new Promise((resolve, reject) => resolve(msg));
+};
 
 createOrder(cartItems)
-.then((orderId) => {
-  // console.log(orderId);
-  return orderId
-}).then((id) => {
-  return proceedToPayment(id)
-}).then((msg) => {
-  // console.log(msg);
-  
-  return showOrderSummary(msg)
-})
-.catch((err) => {
-  // console.log(err.message);
-})
+  .then((orderId) => {
+    // console.log(orderId);
+    return orderId;
+  })
+  .then((id) => {
+    return proceedToPayment(id);
+  })
+  .then((msg) => {
+    // console.log(msg);
+
+    return showOrderSummary(msg);
+  })
+  .catch((err) => {
+    // console.log(err.message);
+  });
 
 function createOrder(cartItems) {
   const pr = new Promise((resolve, reject) => {
     // validate cart items
     // create order in db
-    // receive order id 
+    // receive order id
 
-    if(!validateCart(cartItems)) {
-      const err = new Error('cart item is not valid')
-      reject(err)
+    if (!validateCart(cartItems)) {
+      const err = new Error("cart item is not valid");
+      reject(err);
     }
-    const orderId = '12345'
-    if(orderId) {
-      setTimeout(() => resolve(orderId), 5000)
+    const orderId = "12345";
+    if (orderId) {
+      setTimeout(() => resolve(orderId), 5000);
     }
-  })
-  return pr
+  });
+  return pr;
 }
 
-
-/************ PROMISE APIs 
+/************ PROMISE APIs
  * Promise.all([p1, p2, p3]) - wait for all of them to finish; if any promise fails then promise.all() gets rejected and does not wait for other promises to return value;
  * Promise.allSettled([p1, p2, p3]) - wait for all promises to settle and returns an array of object;
  * Promise.race([p1, p2, p3]) - gives value of the first settled promise whether its success or error;
@@ -212,19 +216,19 @@ function createOrder(cartItems) {
  * *******************/
 
 const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('P1 success'), 3000)
+  setTimeout(() => resolve("P1 success"), 3000);
   // setTimeout(() => reject('P1 fail'), 3000)
-})
+});
 
 const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('P2 success'), 1000)
+  setTimeout(() => resolve("P2 success"), 1000);
   //setTimeout(() => reject('P2 fail'), 1000)
-})
+});
 
 const p3 = new Promise((resolve, reject) => {
-  setTimeout(() => resolve('P3 success'), 2000)
+  setTimeout(() => resolve("P3 success"), 2000);
   // setTimeout(() => reject('P3 fail'), 2000)
-})
+});
 
 // Promise.all([p1, p2, p3])
 //   .then(res => { console.log(res) })
@@ -239,15 +243,15 @@ const p3 = new Promise((resolve, reject) => {
 //   .catch(err => { console.error(err) })
 
 Promise.any([p1, p2, p3])
-  .then(res => { 
+  .then((res) => {
     // console.log(res)
-   })
-  .catch(err => { 
+  })
+  .catch((err) => {
     // console.error(err)
     // console.log(err.errors)
-  })
+  });
 
-/************ ASYNC AWAIT 
+/************ ASYNC AWAIT
  * Async function always returns a promise; if we return a normal value from async function then also async function wraps it inside promise before returning it
  * Await keyword can only be used inside async function
  * When an await expression is encountered within an async function, the execution of that specific async function pauses until the Promise being awaited resolves or rejects
@@ -272,45 +276,97 @@ Promise.any([p1, p2, p3])
 
 // getUser()
 
-
 const p4 = new Promise((resolve, reject) => {
-  console.log('im inside 4');
+  console.log("im inside 4");
   setTimeout(() => {
-    resolve('Promise 4 value is resolved!!')
+    resolve("Promise 4 value is resolved!!");
   }, 10000);
-})
+});
 
 const p5 = new Promise((resolve, reject) => {
-  console.log('im inside 5');
+  console.log("im inside 5");
   setTimeout(() => {
-    resolve('Promise 5 value is resolved!!')
+    resolve("Promise 5 value is resolved!!");
   }, 5000);
-})
+});
 
- 
 async function learnAsyncAwait() {
-  // console.log(new Date().getSeconds());
-  
-  const v1 = await p4
-  // console.log(new Date().getSeconds(), v1);
-  
-  const v2 = await p5
- 
-  // console.log(new Date().getSeconds(), v2);
+  console.log(new Date().getSeconds());
+
+  const v1 = await p4;
+  console.log(new Date().getSeconds(), v1);
+
+  const v2 = await p5;
+
+  console.log(new Date().getSeconds(), v2);
 }
 
-// learnAsyncAwait()
+// learnAsyncAwait();
 
 async function realWorldAsync() {
-  const API = 'https://jsonplaceholder.typicode.com/todos/'
+  const API = "https://jsonplaceholder.typicode.com/todos/";
   try {
-    const data = await fetch(API)
-    const response = await data.json()
-    console.log(response); 
+    const data = await fetch(API);
+    const response = await data.json();
+    console.log(response);
   } catch (err) {
-    console.log(err); 
+    console.log(err);
   }
 }
 
-realWorldAsync()
+// realWorldAsync()
 
+function intersection(...arrays) {
+  if (arrays.length === 0) return [];
+
+  if (arrays.length === 1) {
+    let obj = {};
+    let result = [];
+    for (let i = 0; i < arrays[0].length; i++) {
+      if (obj[arrays[0][i]] == undefined) {
+        obj[arrays[0][i]] = 1;
+        result.push(arrays[0][i]);
+      }
+    }
+    return result;
+  }
+
+  // If any array is empty
+  let anyEmptyArr = arrays.some((arr) => arr.length === 0);
+  if (anyEmptyArr) return [];
+
+  const subsequentArr = arrays.slice(1);
+  let obj = {};
+  let result = [];
+  arrays[0].forEach((el) => {
+    if (obj[el] == undefined) {
+      obj[el] = 1;
+      const isInAll = subsequentArr.every((arr) => arr.includes(el));
+      if (isInAll) {
+        result.push(el);
+      }
+    }
+  });
+  return result;
+}
+const arr1 = [1, 2, 3];
+const arr2 = [2, 3, 4];
+const arr3 = [3, 4, 5];
+const arr4 = [];
+
+//console.log(intersection(arr1, arr2, arr3, arr4));
+
+function uniqueArray(array) {
+  let obj = {};
+  let arr = [];
+  array.forEach((el) => {
+    if (!obj.hasOwnProperty(el)) {
+      obj[el] = 1;
+      arr.push(el);
+    }
+  });
+  console.log("arr------", arr);
+
+  return arr;
+}
+uniqueArray([2, "2", true, "true"]);

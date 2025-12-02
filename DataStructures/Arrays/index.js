@@ -1,3 +1,9 @@
+/***********
+ * Arrays : what to check -> postive, negative values, sparse arrays
+ *
+ *
+ */
+
 /***** Duplicates in sorted array *******************/
 // function removeDuplicates(arr) {
 //   let index = 0;
@@ -177,3 +183,86 @@ function singleElement2(arr) {
 }
 
 console.log(singleElement2([1, 2, 1, 3, 2, 3, 4]));
+
+// great frontend problems********
+function intersection(...arrays) {
+  if (arrays.length === 0) return [];
+
+  if (arrays.length === 1) {
+    let obj = {};
+    let result = [];
+    for (let i = 0; i < arrays[0].length; i++) {
+      if (obj[arrays[0][i]] == undefined) {
+        obj[arrays[0][i]] = 1;
+        result.push(arrays[0][i]);
+      }
+    }
+    return result;
+  }
+
+  // If any array is empty
+  let anyEmptyArr = arrays.some((arr) => arr.length === 0);
+  if (anyEmptyArr) return [];
+
+  const subsequentArr = arrays.slice(1);
+  let obj = {};
+  let result = [];
+  arrays[0].forEach((el) => {
+    if (obj[el] == undefined) {
+      obj[el] = 1;
+      const isInAll = subsequentArr.every((arr) => arr.includes(el));
+      if (isInAll) {
+        result.push(el);
+      }
+    }
+  });
+  return result;
+}
+
+Array.prototype.myFilter = function (callbackFn, thisArg) {
+  const len = this.length;
+  const results = [];
+
+  for (let k = 0; k < len; k++) {
+    const kValue = this[k];
+
+    if (
+      // Ignore index if value is not defined for index (e.g. in sparse arrays).
+      Object.hasOwn(this, k) &&
+      callbackFn.call(thisArg, kValue, k, this)
+    ) {
+      results.push(kValue);
+    }
+  }
+
+  return results;
+};
+
+Array.prototype.myMap = function (callbackFn, thisArg) {
+  const arr = [];
+  const length = this.length;
+
+  for (let i = 0; i < length; i++) {
+    let val = this[i];
+    if (Object.hasOwn(this, i)) {
+      let res = callbackFn.call(thisArg, val, i, this);
+      arr[i] = res;
+    }
+  }
+  return arr;
+};
+
+console.log(
+  "hiiii",
+  [1, 2, , 4].myMap((x) => x * 2)
+);
+
+const john = {
+  age: 42,
+  getAge: function () {
+    return this.age;
+  },
+};
+
+const unboundGetAge = john.getAge.bind(john);
+console.log(unboundGetAge());

@@ -1,3 +1,4 @@
+"use strict";
 // this in global space represents global object. In case of browsers global object is Window, in nodejs it is Global, etc...
 console.log(this);
 
@@ -30,7 +31,7 @@ const obj2 = {
   a: 10,
   x: () => {
     // arrow function does not have its own this binding
-    console.log("arrow-----", this); // it retains the this value of enclosing lexical context. Here enclosing lexical context of arrow function is global space.
+    console.log("arrow-----", this); // it retains the this value of enclosing lexical context. Here enclosing lexical context of arrow function is global space. Arrow functions also ignore .apply(), .call(), and .bind() for this. Their this is always taken from the surrounding (lexical) scope.
   },
   y: function () {
     const z = () => {
@@ -40,15 +41,22 @@ const obj2 = {
   },
   k: () => {
     function hello() {
-      console.log("normal function inside arrow function----", this);
+      console.log("normal function inside arrow function----", this); // this function is not called by any object so it will return undefined in strict mode and Window object in non strict mode
     }
     hello();
+  },
+  l: function () {
+    function normal() {
+      console.log("normal function inside normal function----", this); //
+    }
+    normal();
   },
 };
 
 obj2.x();
 obj2.y();
 obj2.k();
+obj2.l();
 
 // this in call, apply and bind
 let name1 = {
@@ -90,4 +98,20 @@ let name4 = {
 
 /**********
  * In Function.prototype methods, this refers to the Function object itself.
+ * const person = {
+    name: 'John',
+    getName() {
+      return this.name;
+    },
+  };
+
+  person.getName();  -> returns John
+
+  const getName = person.getName;
+  const name = getName();   -> returns undefined
+
+  When the same method is called as a function call, there is no implicit binding, thus resulting in this bound to the global object (in non-strict mode) or an error being thrown (in strict mode) which means that the caller of the function, not the maker of the function, determines its binding.This is where bind comes in handy - we can preserve the context of the method call to person via person.getName.bind(person):
+
+  const getName = person.getName.bind(person);
+  const name = getName(); // 'John' 
  */

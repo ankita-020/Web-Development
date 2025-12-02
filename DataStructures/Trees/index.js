@@ -21,6 +21,6 @@
  * Balanced Binary tree - height of tree is log(n)
  * Leaf - node which does not have children
  * root.val; root.left; root.right
- * Depth First Search - uses stack
- * Breadth First Search - uses queue
+ * Depth First Search - uses stack; ex - preorder, inorder, postorder traversal
+ * Breadth First Search - uses queue; ex - level order, zig zag
  */

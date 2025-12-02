@@ -81,7 +81,7 @@ function insertionSort(arr) {
   for (let i = 1; i < n; i++) {
     let current = arr[i];
     let prev = i - 1;
-    while (arr[prev] > current && prev >= 0) {
+    while (current < arr[prev] && prev >= 0) {
       arr[prev + 1] = arr[prev];
       prev--;
     }
