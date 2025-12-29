@@ -308,3 +308,188 @@ function removeNthElementsFromEndOnePass(head, n) {
 
 // console.log(removeNthElementsFromEndOnePass(newList.head, 2));
 // console.log(newList.get(4));
+
+function removeDuplicatesFromSortedList(head) {
+  let curr = head;
+
+  while (curr && curr.next) {
+    if (curr.val === curr.next.val) {
+      curr.next = curr.next.next;
+    } else {
+      curr = curr.next;
+    }
+  }
+  return head;
+}
+
+let duplicateList = new MyLinkedList();
+duplicateList.addAtHead(10);
+duplicateList.addAtIndex(1, 10);
+duplicateList.addAtIndex(2, 11);
+duplicateList.addAtIndex(3, 12);
+duplicateList.addAtIndex(4, 12);
+duplicateList.addAtIndex(5, 13);
+duplicateList.addAtIndex(6, 14);
+duplicateList.addAtIndex(7, 14);
+// console.log(removeDuplicatesFromSortedList(duplicateList.head));
+// console.log(duplicateList.get(2));
+
+function groupOddFollowedByEvenIndices(head) {
+  if (!head || !head.next) return head;
+  let odd = head;
+  let even = head.next;
+  let evenStart = even;
+
+  while (odd.next && even.next) {
+    odd.next = odd.next.next;
+    even.next = even.next.next;
+    odd = odd.next;
+    even = even.next;
+  }
+
+  odd.next = evenStart;
+  return head;
+}
+
+let oddEvenList = new MyLinkedList();
+oddEvenList.addAtHead(11);
+oddEvenList.addAtIndex(1, 12);
+oddEvenList.addAtIndex(2, 13);
+oddEvenList.addAtIndex(3, 14);
+oddEvenList.addAtIndex(4, 15);
+oddEvenList.addAtIndex(5, 16);
+oddEvenList.addAtIndex(6, 17);
+oddEvenList.addAtIndex(7, 18);
+
+// groupOddFollowedByEvenIndices(oddEvenList.head);
+// console.log(oddEvenList.get(1));
+
+function addValuesOfBothList(head1, head2) {
+  let carry = 0;
+  let curr1 = head1;
+  let curr2 = head2;
+
+  let ans = new Node();
+  let ansHead = ans;
+
+  while (curr1 || curr2 || carry) {
+    let sum = (!curr1 ? 0 : curr1.val) + (!curr2 ? 0 : curr2.val) + carry;
+    let carry = sum >= 10 ? 1 : 0; // let carry = Math.floor(sum/10)
+    let digit = sum % 10;
+
+    let newNode = new Node(digit);
+    ans.next = newNode;
+    ans = ans.next;
+
+    curr1 = curr1 && curr1.next;
+    curr2 = curr2 && curr2.next;
+  }
+  return ansHead.next;
+}
+
+function mergeTwoSortedLists(l1, l2) {
+  let node = new Node();
+  let curr = node;
+
+  while (l1 && l2) {
+    if (l1.val < l2.val) {
+      curr.next = l1;
+      l1 = l1.next;
+    } else {
+      curr.next = l2;
+      l2 = l2.next;
+    }
+    curr = curr.next;
+  }
+
+  if (!l1) {
+    curr.next = l2;
+  }
+  if (!l2) {
+    curr.next = l1;
+  }
+
+  return node.next;
+}
+
+let list1 = new MyLinkedList();
+let list2 = new MyLinkedList();
+list1.addAtHead(1);
+list1.addAtIndex(1, 2);
+list1.addAtIndex(2, 4);
+
+list2.addAtHead(1);
+list2.addAtIndex(1, 3);
+list2.addAtIndex(2, 4);
+
+//console.log(mergeTwoSortedLists(list1.head, list2.head));
+
+function rotateListKthTimes(head, k) {
+  // corner case
+  if (!head || !head.next) return head;
+  // Find size of list
+  let curr = head;
+  let size = 0;
+  while (curr) {
+    curr = curr.next;
+    size++;
+  }
+
+  // to avoid unnecessary rotation
+  k = k % size;
+  if (k === 0) return head;
+
+  // Move fast pointer k steps ahead
+  let fast = head;
+  let slow = head;
+  for (let i = 0; i < k; i++) {
+    fast = fast.next;
+  }
+
+  // Reach the end of list
+  while (fast.next) {
+    fast = fast.next;
+    slow = slow.next;
+  }
+
+  let newHead = slow.next;
+  slow.next = null;
+  fast.next = head;
+  head = newHead;
+
+  return head;
+}
+
+//console.log(rotateListKthTimes(newList.head, 7));
+
+function swapAdjacentNodes(head) {
+  //corner case
+  if (!head || !head.next) return head;
+
+  let node = new Node();
+  let prev = node;
+  let curr = head;
+
+  while (curr && curr.next) {
+    prev.next = curr.next;
+    let temp = curr.next.next;
+    prev.next.next = curr;
+    curr.next = temp;
+
+    prev = curr;
+    curr = prev.next;
+  }
+  return node.next;
+}
+
+let list = new MyLinkedList();
+list.addAtHead(1);
+list.addAtIndex(1, 2);
+list.addAtIndex(2, 3);
+list.addAtIndex(3, 4);
+list.addAtIndex(4, 5);
+list.addAtIndex(5, 6);
+
+console.log(swapAdjacentNodes(list.head));
+
+function swapAdjacentNodesUsingRecursion() {}

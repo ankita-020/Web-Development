@@ -1,4 +1,6 @@
 "use strict";
+// this keyword refers to the object that is currently executing the code
+// In the context of event handlers, this usually refers to the DOM element that triggered the event.
 // this in global space represents global object. In case of browsers global object is Window, in nodejs it is Global, etc...
 console.log(this);
 
